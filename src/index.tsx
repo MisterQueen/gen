@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import StartPage from "./pages/start";
+import OverPage from "./pages/over";
+import PlayPage from "./pages/play";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +12,13 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/start" element={<StartPage/>} />
+        <Route path="/play" element={<PlayPage/>} />
+        <Route path="/over" element={<OverPage/>} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 

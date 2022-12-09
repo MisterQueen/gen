@@ -1,0 +1,26 @@
+.root {
+    background-color: var(--orange100);
+    border-radius: 12px;
+    padding: 20px 24px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--button);
+    line-height: 116%;
+    color: var(--white);
+    transition: .3s;
+    }
+
+.root:hover {
+    background-color: var(--orange80);
+}
+
+.root:focus, .root:active {
+    background-color: var(--orange120);
+}
+
+@media (max-width: 768px) {
+    .root {
+        padding: 16px 24px;
+    }
+}

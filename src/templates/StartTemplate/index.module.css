@@ -1,0 +1,86 @@
+.root {
+    background: var(--white);
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.bgFigure {
+    left: 0;
+    top: 0;
+    position: absolute;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange5);
+}
+
+.content {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+    z-index: 1;
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(288.5px, 1fr));
+    column-gap: 32px;
+    row-gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: var(--headline);
+    color: var(--black100);
+    font-weight: 600;
+}
+
+.imgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    max-width: 100%;
+}
+
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+}
+
+.buttonWrapper {
+    max-width: 296px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 80px 16px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgWrapper {
+        height: max-content;
+    }
+
+    .textBlock {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .img {
+        max-width: 250px;
+    }
+
+    .buttonWrapper {
+        width: 100%;
+    }
+}

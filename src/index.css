@@ -11,3 +11,70 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  line-height: 116%;
+  color: var(--black100);
+}
+
+/*Figures: */
+:root {
+  /*That's certainly not the best approach, but I couldn't think of anything else*/
+  --mainFigure: polygon(0 50%, 26px 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 26px 100%)
+}
+
+/*Media size: */
+:root {
+  --mobile: 768px
+}
+
+/*Colors: */
+:root {
+  --white: #fff;
+  --orange120: #E87928;
+  --orange100: #FF8B37;
+  --orange80: #FFAC70;
+  --orange5: #FFF3EB;
+  --green100: #47D867;
+  --green5: #E6FAEA;
+  --red100: #EC6259;
+  --red5: #FDEEED;
+  --black100: #1C1C21;
+  --black40: #D0D0D8;
+  --black5: #F5F5F7;
+}
+
+/*Typography: */
+:root {
+  --headline: 56px;
+  --question: 32px;
+  --option: 20px;
+  --button: 20px
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --headline: 46px;
+    --question: 22px;
+    --option: 16px;
+    --button: 16px;
+  }
+}
+
+@media (max-width: 768px){
+  :root {
+    --headline: 32px;
+    --question: 18px;
+    --option: 14px;
+    --button: 14px;
+  }
+}
