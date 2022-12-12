@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import StartPage from "./pages/start";
 import OverPage from "./pages/over";
 import PlayPage from "./pages/play";
@@ -14,7 +14,7 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/start" element={<StartPage/>} />
+        <Route path="/" element={<StartPage/>} />
         <Route path="/play" element={<PlayPage/>} />
         <Route path="/over" element={<OverPage/>} />
       </Routes>
